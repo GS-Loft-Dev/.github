@@ -19,12 +19,12 @@ Un percorso guidato dalla scienza e costruito su misura, con un team di medici, 
 
 Sette pilastri, un solo percorso.
 
-| | |
-|:--|:--|
-| `01` &nbsp; Prevenzione e test di precisione | `05` &nbsp; Mindset e gestione dello stress |
-| `02` &nbsp; Allenamento | `06` &nbsp; Ottimizzazione del sonno |
-| `03` &nbsp; Nutrizione | `07` &nbsp; Gestione del tempo |
-| `04` &nbsp; Nutraceutica | |
+<table>
+  <tr><td><code>01</code>&nbsp; Prevenzione e test di precisione</td><td><code>05</code>&nbsp; Mindset e gestione dello stress</td></tr>
+  <tr><td><code>02</code>&nbsp; Allenamento</td><td><code>06</code>&nbsp; Ottimizzazione del sonno</td></tr>
+  <tr><td><code>03</code>&nbsp; Nutrizione</td><td><code>07</code>&nbsp; Gestione del tempo</td></tr>
+  <tr><td><code>04</code>&nbsp; Nutraceutica</td><td></td></tr>
+</table>
 
 <br>
 
@@ -42,9 +42,9 @@ Qui il team sviluppa gli **strumenti interni** che sostengono il metodo: dashboa
 
 ## ( contatti )
 
-| | |
-|:--|:--|
-| Sito | [gsloft.it](https://www.gsloft.it) |
-| Email | [info@gsloft.it](mailto:info@gsloft.it) |
-| Social | [Instagram](https://www.instagram.com/gs_loft) &nbsp;·&nbsp; [LinkedIn](https://it.linkedin.com/company/gsloft) &nbsp;·&nbsp; [Facebook](https://www.facebook.com/gspazziniloft) |
-| Lavora con noi | [posizioni aperte](https://www.linkedin.com/company/gsloft/jobs/) |
+<table>
+  <tr><td><b>Sito</b></td><td><a href="https://www.gsloft.it">gsloft.it</a></td></tr>
+  <tr><td><b>Email</b></td><td><a href="mailto:info@gsloft.it">info@gsloft.it</a></td></tr>
+  <tr><td><b>Social</b></td><td><a href="https://www.instagram.com/gs_loft">Instagram</a> &nbsp;·&nbsp; <a href="https://it.linkedin.com/company/gsloft">LinkedIn</a> &nbsp;·&nbsp; <a href="https://www.facebook.com/gspazziniloft">Facebook</a></td></tr>
+  <tr><td><b>Lavora con noi</b></td><td><a href="https://www.linkedin.com/company/gsloft/jobs/">posizioni aperte</a></td></tr>
+</table>
