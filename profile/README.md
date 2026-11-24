@@ -32,11 +32,20 @@ Sette pilastri, un solo percorso.
 
 Qui il team sviluppa gli **strumenti interni** che sostengono il metodo: dashboard, automazioni e integrazioni tra dati, preventivi e servizi.
 
-| Progetto | Cosa fa |
-|:--|:--|
-| **dash-previntegratori** | Dashboard dei preventivi degli integratori, collegata a Google Fogli |
+| | Progetto | Cosa fa |
+|:--|:--|:--|
+| **Dashboard** | `dash-previntegratori` | Preventivi degli integratori, collegati a Google Fogli |
+| | `Portale-Sales` | Performance del team sales con i dati di HubSpot |
+| **Automazioni** | `GS-Bot-Discord` | Bot del team: invio del Bio Profilo e dello Starter Check e altre automazioni |
+| | `lovableTOhubspot` | Pubblicazione automatica delle landing Lovable su HubSpot |
+| | `BIO_Profilo` | Bio Profilo dei clienti |
+| **AI** | `assistenteLOFT` | Assistente AI del team, con permessi diversi per ogni utente |
+| | `gs-mind-memoria` | La memoria dell'assistente GS Mind |
+| **Strumenti** | `Lovable-TO-Hub_WEBAPP` | Web app che trasforma un progetto Lovable in un tema HubSpot modificabile |
+| | `PortaleQuiz` | Quiz a tempo e survey interne per il team |
+| **Dati** | `data_management_project` | Centralizzazione dei dati di HubSpot e dei database interni |
 
-<sub>I repository sono privati: li vedono solo i membri dell'organizzazione.</sub>
+<sub>La maggior parte dei repository è privata: li vedono solo i membri dell'organizzazione.</sub>
 
 <br>
 
