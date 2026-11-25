@@ -33,20 +33,30 @@ Qui il team sviluppa gli **strumenti interni** che sostengono il metodo: dashboa
   <img alt="I dati di HubSpot, Google Fogli, Lovable e dei database interni passano dagli strumenti di GS-Loft-Dev e diventano dashboard, automazioni, AI, strumenti e dati centralizzati per il team." src="./assets/dev-light.svg" width="100%">
 </picture>
 
-| | Progetto | Cosa fa |
-|:--|:--|:--|
-| **Dashboard** | `dash-previntegratori` | Preventivi degli integratori, collegati a Google Fogli |
-| | `Portale-Sales` | Performance del team sales con i dati di HubSpot |
-| **Automazioni** | `GS-Bot-Discord` | Bot del team: invio del Bio Profilo e dello Starter Check e altre automazioni |
-| | `lovableTOhubspot` | Pubblicazione automatica delle landing Lovable su HubSpot |
-| | `BIO_Profilo` | Bio Profilo dei clienti |
-| **AI** | `assistenteLOFT` | Assistente AI del team, con permessi diversi per ogni utente |
-| | `gs-mind-memoria` | La memoria dell'assistente GS Mind |
-| **Strumenti** | `Lovable-TO-Hub_WEBAPP` | Web app che trasforma un progetto Lovable in un tema HubSpot modificabile |
-| | `PortaleQuiz` | Quiz a tempo e survey interne per il team |
-| **Dati** | `data_management_project` | Centralizzazione dei dati di HubSpot e dei database interni |
+<!-- progetti:inizio -->
+| | Progetto | Cosa fa | Aggiornato |
+|:--|:--|:--|:--|
+| **Dashboard** | `dash-previntegratori` | Preventivi degli integratori, collegati a Google Fogli | 24 nov 2026 |
+|  | [`Portale-Sales`](https://github.com/GS-Loft-Dev/Portale-Sales) | Performance del team sales con i dati di HubSpot | 4 nov 2026 |
+| **Automazioni** | `lovableTOhubspot` | Pubblicazione automatica delle landing Lovable su HubSpot | 10 nov 2026 |
+|  | `GS-Bot-Discord` | Bot del team: invio del Bio Profilo e dello Starter Check e altre automazioni | 4 nov 2026 |
+|  | `BIO_Profilo` | Bio Profilo dei clienti | 23 set 2026 |
+| **AI** | `gs-mind-memoria` | La memoria dell'assistente GS Mind | 19 nov 2026 |
+|  | `assistenteLOFT` | Assistente AI del team, con permessi diversi per ogni utente | 22 set 2026 |
+| **Strumenti** | [`Lovable-TO-Hub_WEBAPP`](https://github.com/GS-Loft-Dev/Lovable-TO-Hub_WEBAPP) | Web app che trasforma un progetto Lovable in un tema HubSpot modificabile | 10 nov 2026 |
+|  | [`PortaleQuiz`](https://github.com/GS-Loft-Dev/PortaleQuiz) | Quiz a tempo e survey interne per il team | 3 nov 2026 |
+| **Dati** | `data_management_project` | Centralizzazione dei dati di HubSpot e dei database interni | 15 set 2026 |
+| **Altro** | [`restyling-web`](https://github.com/GS-Loft-Dev/restyling-web) <sup>nuovo</sup> | In sviluppo | 25 nov 2026 |
 
-<sub>La maggior parte dei repository è privata: li vedono solo i membri dell'organizzazione.</sub>
+<sub>11 progetti, 7 privati: li vedono solo i membri dell'organizzazione. Elenco aggiornato da solo da una GitHub Action.</sub>
+<!-- progetti:fine -->
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/attivita-dark.svg">
+  <img alt="Ultimi aggiornamenti dei repository di GS-Loft-Dev" src="./assets/attivita-light.svg" width="100%">
+</picture>
 
 <br>
 

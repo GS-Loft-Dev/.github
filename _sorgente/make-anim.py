@@ -4,12 +4,14 @@
 # GitHub mostra le immagini del README come <img>: niente JavaScript, solo animazioni SMIL e CSS dentro l'SVG.
 # Il logo è il tracciato originale (logo-paths.txt). Il testo usa Inter Tight se installato, altrimenti il
 # sans-serif di sistema: il carattere non è incorporato nel file.
-import pathlib, re
+import json, pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / '_sorgente'
 OUT = ROOT / 'profile' / 'assets'
 LOGO = (SRC / 'logo-paths.txt').read_text()
+# dati veri dei repository, scritti da aggiorna.py (se manca, valgono i testi fissi qui sotto)
+DATI = json.loads((SRC / 'dati.json').read_text()) if (SRC / 'dati.json').exists() else None
 FONT = "'Inter Tight','Inter','Helvetica Neue',Helvetica,Arial,sans-serif"
 THEMES = {
     'light': dict(bg='#F8F8F8', ink='#0C0C0C', soft='#6B6B6B', line='#D9D9D9', card='#FFFFFF', acc='#EAF0C2', accInk='#0C0C0C', dim='#BDBDBD'),
@@ -49,6 +51,8 @@ def banner(t):
     claim = [("Tecnologia", t['ink'], 400), ("al servizio del", t['soft'], 300), ("metodo.", t['ink'], 400)]
     claim_svg = ''.join(f'<text class="cl" style="--i:{i}" x="{W - 496}" y="{150 + i * 41}" font-size="38" font-weight="{fw}" letter-spacing="-1.1" fill="{c}">{ESC(w)}</text>' for i, (w, c, fw) in enumerate(claim))
     ticker = ['Strumenti interni del team GS LOFT:', 'dashboard, automazioni e integrazioni.']
+    if DATI and DATI.get('ultimo'):
+        ticker = [f"{DATI['totale']} strumenti interni del team GS LOFT,", f"ultimo aggiornamento: {DATI['ultimo']['data']}"]
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="GS·LOFT — Coaching per longevità e performance. Tecnologia al servizio del metodo.">
 <title>GS·LOFT — Tecnologia al servizio del metodo</title>
 <style>
@@ -117,11 +121,20 @@ def metodo(t):
 
 
 def dev(t):
-    W, H = 1280, 420
     sources = ['HubSpot', 'Google Fogli', 'Lovable', 'Database interni']
     outs = [('Dashboard', 'dash-previntegratori · Portale-Sales'), ('Automazioni', 'GS-Bot-Discord · lovableTOhubspot · BIO_Profilo'),
             ('AI', 'assistenteLOFT · gs-mind-memoria'), ('Strumenti', 'Lovable-TO-Hub_WEBAPP · PortaleQuiz'), ('Dati', 'data_management_project')]
-    cx, cy = 470, 236
+    if DATI:  # i gruppi e i nomi vengono dai repository veri
+        gruppi = {}
+        for p in DATI['progetti']: gruppi.setdefault(p['gruppo'], []).append(p['nome'])
+        outs = []
+        for g, nomi in gruppi.items():
+            riga = ' · '.join(nomi)
+            while len(riga) > 62 and len(nomi) > 1: nomi = nomi[:-1]; riga = ' · '.join(nomi) + f' · +{len(gruppi[g]) - len(nomi)}'
+            outs.append((f'{g}  ({len(gruppi[g])})', riga))
+    W = 1280
+    H = max(420, 92 + len(outs) * 66 + 20)
+    cx, cy = 470, (92 + (len(outs) - 1) * 66 / 2) if len(outs) > 5 else 236
     src, wires, pk = [], [], []
     for i, s in enumerate(sources):
         y = 110 + i * 64
@@ -151,8 +164,49 @@ def dev(t):
 </svg>'''
 
 
+def attivita(t):
+    """Ultimi aggiornamenti: ogni repository è un punto sulla linea degli ultimi 60 giorni, nella data del suo ultimo push."""
+    import datetime
+    W = 1280
+    pr = sorted(DATI['progetti'], key=lambda p: p['aggiornato'], reverse=True)
+    oggi = datetime.datetime.now(datetime.timezone.utc).date()
+    giorni = 60
+    x0, x1, ya = 56, W - 56, 96
+    sx = lambda d: x1 - (oggi - d).days / giorni * (x1 - x0)
+    marks = ''.join(f'<path d="M{sx(oggi - datetime.timedelta(days=k)):.0f} {ya - 4}V{ya + 4}" stroke="{t["line"]}"/>'
+                    f'<text x="{sx(oggi - datetime.timedelta(days=k)):.0f}" y="{ya + 22}" text-anchor="middle" font-size="11" fill="{t["soft"]}">{"oggi" if k == 0 else f"-{k} gg"}</text>' for k in range(0, giorni + 1, 10))
+    dots = []
+    for i, p in enumerate(pr):
+        d = datetime.date.fromisoformat(p['aggiornato'][:10])
+        if (oggi - d).days > giorni: continue
+        x = sx(d)
+        dots.append(f'<circle class="pt" style="--i:{i}" cx="{x:.0f}" cy="{ya}" r="6" fill="{t["acc"] if i == 0 else t["ink"]}" stroke="{t["ink"]}"/>')
+    rows = []
+    for i, p in enumerate(pr[:6]):
+        y = 160 + i * 40
+        rows.append(f"""<g class="rw" style="--i:{i}"><rect x="56" y="{y - 24}" width="{W - 112}" height="34" rx="10" fill="{t["card"]}" stroke="{t["line"]}"/>
+<circle cx="78" cy="{y - 7}" r="4" fill="{t["acc"] if i == 0 else t["dim"]}" stroke="{t["ink"]}" stroke-width=".6">{'<animate attributeName="r" values="4;6;4" dur="1.6s" repeatCount="indefinite"/>' if i == 0 else ''}</circle>
+<text x="96" y="{y - 2}" font-size="15" font-weight="500" fill="{t["ink"]}">{ESC(p["nome"])}</text>
+<text x="400" y="{y - 2}" font-size="13" fill="{t["soft"]}">{ESC(p["gruppo"])}</text>
+<text x="560" y="{y - 2}" font-size="13" fill="{t["soft"]}">{ESC(p["testo"][:58] + ("…" if len(p["testo"]) > 58 else ""))}</text>
+<text x="{W - 76}" y="{y - 2}" font-size="13" text-anchor="end" fill="{t["ink"]}">{ESC(p["aggiornato_it"])}</text></g>""")
+    H = 160 + len(rows) * 40 + 10
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Ultimi aggiornamenti dei repository di GS-Loft-Dev: {ESC(', '.join(p['nome'] + ' ' + p['aggiornato_it'] for p in pr[:6]))}">
+<style>text{{font-family:{FONT};white-space:pre}} .rw,.pt{{opacity:0;animation:up .6s cubic-bezier(.2,.8,.2,1) forwards}} .rw{{animation-delay:calc(var(--i)*.12s + .9s)}} .pt{{animation-delay:calc(var(--i)*.1s + .3s)}}
+.ax{{stroke-dasharray:{x1 - x0};stroke-dashoffset:{x1 - x0};animation:ln 1s ease forwards}} @keyframes ln{{to{{stroke-dashoffset:0}}}}
+@keyframes up{{from{{opacity:0;transform:translateY(8px)}}to{{opacity:1;transform:none}}}} {REDUCE}</style>
+<rect width="{W}" height="{H}" fill="{t["bg"]}"/>
+<text x="56" y="46" font-size="26" letter-spacing="-.6" fill="{t["ink"]}">Ultimi aggiornamenti, <tspan fill="{t["soft"]}" font-weight="300">rilevati ogni ora.</tspan></text>
+<text x="{W - 56}" y="46" font-size="14" text-anchor="end" fill="{t["soft"]}">( {DATI["totale"]} progetti )</text>
+<path class="ax" d="M{x0} {ya}H{x1}" stroke="{t["ink"]}"/>{marks}{"".join(dots)}
+<circle cx="{x1}" cy="{ya}" r="6" fill="none" stroke="{t["ink"]}"><animate attributeName="r" values="6;16" dur="2s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".6;0" dur="2s" repeatCount="indefinite"/></circle>
+{"".join(rows)}
+</svg>"""
+
+
 OUT.mkdir(parents=True, exist_ok=True)
-for name, fn in [('banner', banner), ('metodo', metodo), ('dev', dev)]:
+SVGS = [('banner', banner), ('metodo', metodo), ('dev', dev)] + ([('attivita', attivita)] if DATI else [])
+for name, fn in SVGS:
     for theme, t in THEMES.items():
         p = OUT / f'{name}-{theme}.svg'
         p.write_text(fn(t))

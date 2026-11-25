@@ -1,0 +1,37 @@
+name: aggiorna profilo
+
+# Tiene il profilo di GS-Loft-Dev allineato ai repository: tabella dei progetti, banner e ultimi aggiornamenti.
+on:
+  schedule:
+    - cron: "17 * * * *"        # ogni ora
+  workflow_dispatch:             # a mano, da Actions › aggiorna profilo › Run workflow
+  repository_dispatch:
+    types: [aggiorna-profilo]    # un altro repository può chiederlo subito dopo un push
+  push:
+    branches: [main]
+    paths: ["_sorgente/**"]      # quando cambiano testi, gruppi o grafica
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aggiorna-profilo
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rifai tabella e immagini dai repository
+        env:
+          ORG_READ_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+        run: python3 _sorgente/aggiorna.py
+      - name: Salva se è cambiato qualcosa
+        run: |
+          git add profile _sorgente/dati.json
+          git diff --cached --quiet && { echo "niente da aggiornare"; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Profilo aggiornato dai repository"
+          git push

@@ -1,0 +1,17 @@
+{
+  "_come_funziona": "Qui si decide come appare ogni repository nel profilo. 'gruppo' è la riga della tabella, 'testo' è il 'Cosa fa'. Un repository nuovo che non è qui compare da solo: il gruppo viene dai suoi topic (dashboard, automazioni, ai, strumenti, dati, web) e il testo dalla sua descrizione su GitHub. Per non mostrarlo, aggiungilo a 'nascondi' oppure dagli il topic 'nascondi'.",
+  "gruppi": ["Dashboard", "Automazioni", "AI", "Strumenti", "Dati", "Web", "Altro"],
+  "nascondi": [".github"],
+  "progetti": {
+    "dash-previntegratori": { "gruppo": "Dashboard", "testo": "Preventivi degli integratori, collegati a Google Fogli" },
+    "Portale-Sales": { "gruppo": "Dashboard", "testo": "Performance del team sales con i dati di HubSpot" },
+    "GS-Bot-Discord": { "gruppo": "Automazioni", "testo": "Bot del team: invio del Bio Profilo e dello Starter Check e altre automazioni" },
+    "lovableTOhubspot": { "gruppo": "Automazioni", "testo": "Pubblicazione automatica delle landing Lovable su HubSpot" },
+    "BIO_Profilo": { "gruppo": "Automazioni", "testo": "Bio Profilo dei clienti" },
+    "assistenteLOFT": { "gruppo": "AI", "testo": "Assistente AI del team, con permessi diversi per ogni utente" },
+    "gs-mind-memoria": { "gruppo": "AI", "testo": "La memoria dell'assistente GS Mind" },
+    "Lovable-TO-Hub_WEBAPP": { "gruppo": "Strumenti", "testo": "Web app che trasforma un progetto Lovable in un tema HubSpot modificabile" },
+    "PortaleQuiz": { "gruppo": "Strumenti", "testo": "Quiz a tempo e survey interne per il team" },
+    "data_management_project": { "gruppo": "Dati", "testo": "Centralizzazione dei dati di HubSpot e dei database interni" }
+  }
+}

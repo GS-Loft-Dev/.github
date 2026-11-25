@@ -1,0 +1,131 @@
+{
+  "progetti": [
+    {
+      "nome": "dash-previntegratori",
+      "gruppo": "Dashboard",
+      "testo": "Preventivi degli integratori, collegati a Google Fogli",
+      "privato": true,
+      "url": null,
+      "lingua": "HTML",
+      "aggiornato": "2026-11-24T16:54:34Z",
+      "aggiornato_it": "24 nov 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "Portale-Sales",
+      "gruppo": "Dashboard",
+      "testo": "Performance del team sales con i dati di HubSpot",
+      "privato": false,
+      "url": "https://github.com/GS-Loft-Dev/Portale-Sales",
+      "lingua": "HTML",
+      "aggiornato": "2026-11-04T14:17:36Z",
+      "aggiornato_it": "4 nov 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "lovableTOhubspot",
+      "gruppo": "Automazioni",
+      "testo": "Pubblicazione automatica delle landing Lovable su HubSpot",
+      "privato": true,
+      "url": null,
+      "lingua": "JavaScript",
+      "aggiornato": "2026-11-10T10:24:46Z",
+      "aggiornato_it": "10 nov 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "GS-Bot-Discord",
+      "gruppo": "Automazioni",
+      "testo": "Bot del team: invio del Bio Profilo e dello Starter Check e altre automazioni",
+      "privato": true,
+      "url": null,
+      "lingua": "HTML",
+      "aggiornato": "2026-11-04T12:53:30Z",
+      "aggiornato_it": "4 nov 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "BIO_Profilo",
+      "gruppo": "Automazioni",
+      "testo": "Bio Profilo dei clienti",
+      "privato": true,
+      "url": null,
+      "lingua": "",
+      "aggiornato": "2026-09-23T14:52:39Z",
+      "aggiornato_it": "23 set 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "gs-mind-memoria",
+      "gruppo": "AI",
+      "testo": "La memoria dell'assistente GS Mind",
+      "privato": true,
+      "url": null,
+      "lingua": "",
+      "aggiornato": "2026-11-19T14:49:54Z",
+      "aggiornato_it": "19 nov 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "assistenteLOFT",
+      "gruppo": "AI",
+      "testo": "Assistente AI del team, con permessi diversi per ogni utente",
+      "privato": true,
+      "url": null,
+      "lingua": "",
+      "aggiornato": "2026-09-22T13:10:37Z",
+      "aggiornato_it": "22 set 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "Lovable-TO-Hub_WEBAPP",
+      "gruppo": "Strumenti",
+      "testo": "Web app che trasforma un progetto Lovable in un tema HubSpot modificabile",
+      "privato": false,
+      "url": "https://github.com/GS-Loft-Dev/Lovable-TO-Hub_WEBAPP",
+      "lingua": "TypeScript",
+      "aggiornato": "2026-11-10T11:00:21Z",
+      "aggiornato_it": "10 nov 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "PortaleQuiz",
+      "gruppo": "Strumenti",
+      "testo": "Quiz a tempo e survey interne per il team",
+      "privato": false,
+      "url": "https://github.com/GS-Loft-Dev/PortaleQuiz",
+      "lingua": "JavaScript",
+      "aggiornato": "2026-11-03T10:16:08Z",
+      "aggiornato_it": "3 nov 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "data_management_project",
+      "gruppo": "Dati",
+      "testo": "Centralizzazione dei dati di HubSpot e dei database interni",
+      "privato": true,
+      "url": null,
+      "lingua": "Python",
+      "aggiornato": "2026-09-15T08:58:20Z",
+      "aggiornato_it": "15 set 2026",
+      "nuovo": false
+    },
+    {
+      "nome": "restyling-web",
+      "gruppo": "Altro",
+      "testo": "In sviluppo",
+      "privato": false,
+      "url": "https://github.com/GS-Loft-Dev/restyling-web",
+      "lingua": "HTML",
+      "aggiornato": "2026-11-25T13:58:23Z",
+      "aggiornato_it": "25 nov 2026",
+      "nuovo": true
+    }
+  ],
+  "totale": 11,
+  "privati": 7,
+  "ultimo": {
+    "nome": "restyling-web",
+    "data": "25 nov 2026"
+  }
+}
