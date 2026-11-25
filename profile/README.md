@@ -36,17 +36,17 @@ Qui il team sviluppa gli **strumenti interni** che sostengono il metodo: dashboa
 <!-- progetti:inizio -->
 | | Progetto | Cosa fa | Aggiornato |
 |:--|:--|:--|:--|
-| **Dashboard** | `dash-previntegratori` | Preventivi degli integratori, collegati a Google Fogli | 24 nov 2026 |
-|  | [`Portale-Sales`](https://github.com/GS-Loft-Dev/Portale-Sales) | Performance del team sales con i dati di HubSpot | 4 nov 2026 |
-| **Automazioni** | `lovableTOhubspot` | Pubblicazione automatica delle landing Lovable su HubSpot | 10 nov 2026 |
-|  | `GS-Bot-Discord` | Bot del team: invio del Bio Profilo e dello Starter Check e altre automazioni | 4 nov 2026 |
-|  | `BIO_Profilo` | Bio Profilo dei clienti | 23 set 2026 |
-| **AI** | `gs-mind-memoria` | La memoria dell'assistente GS Mind | 19 nov 2026 |
-|  | `assistenteLOFT` | Assistente AI del team, con permessi diversi per ogni utente | 22 set 2026 |
-| **Strumenti** | [`Lovable-TO-Hub_WEBAPP`](https://github.com/GS-Loft-Dev/Lovable-TO-Hub_WEBAPP) | Web app che trasforma un progetto Lovable in un tema HubSpot modificabile | 10 nov 2026 |
-|  | [`PortaleQuiz`](https://github.com/GS-Loft-Dev/PortaleQuiz) | Quiz a tempo e survey interne per il team | 3 nov 2026 |
-| **Dati** | `data_management_project` | Centralizzazione dei dati di HubSpot e dei database interni | 15 set 2026 |
-| **Altro** | [`restyling-web`](https://github.com/GS-Loft-Dev/restyling-web) <sup>nuovo</sup> | In sviluppo | 25 nov 2026 |
+| **Dashboard** | [`Portale-Sales`](https://github.com/GS-Loft-Dev/Portale-Sales) | Performance del team sales con i dati di HubSpot | 25 nov 2026 |
+|  | `dash-previntegratori` | Preventivi degli integratori, collegati a Google Fogli | 25 nov 2026 |
+| **Automazioni** | `GS-Bot-Discord` | Bot del team: invio del Bio Profilo e dello Starter Check e altre automazioni | 25 nov 2026 |
+|  | `BIO_Profilo` | Bio Profilo dei clienti | 25 nov 2026 |
+|  | `lovableTOhubspot` | Pubblicazione automatica delle landing Lovable su HubSpot | 25 nov 2026 |
+| **AI** | `gs-mind-memoria` | La memoria dell'assistente GS Mind | 25 nov 2026 |
+|  | `assistenteLOFT` | Assistente AI del team, con permessi diversi per ogni utente | 25 nov 2026 |
+| **Strumenti** | [`PortaleQuiz`](https://github.com/GS-Loft-Dev/PortaleQuiz) | Quiz a tempo e survey interne per il team | 25 nov 2026 |
+| **Dati** | `data_management_project` | Centralizzazione dei dati di HubSpot e dei database interni | 25 nov 2026 |
+| **Altro** | [`luvhub`](https://github.com/GS-Loft-Dev/luvhub) <sup>nuovo</sup> | In sviluppo | 25 nov 2026 |
+|  | [`restyling-web`](https://github.com/GS-Loft-Dev/restyling-web) <sup>nuovo</sup> | In sviluppo | 25 nov 2026 |
 
 <sub>11 progetti, 7 privati: li vedono solo i membri dell'organizzazione. Elenco aggiornato da solo da una GitHub Action.</sub>
 <!-- progetti:fine -->
