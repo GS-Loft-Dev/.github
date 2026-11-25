@@ -42,7 +42,10 @@ def raccogli():
     repos = api(f"/orgs/{ORG}/repos?type=all&per_page=100&sort=pushed")
     if not any(r["private"] for r in repos):
         # senza permessi sui privati la tabella perderebbe quasi tutti i progetti: meglio fermarsi che cancellarli
-        sys.exit("nessun repository privato visibile: serve un token che li legga (segreto ORG_READ_TOKEN). Non cambio niente.")
+        tok = os.environ.get("ORG_READ_TOKEN") or ""
+        tipo = "fine-grained" if tok.startswith("github_pat_") else "classico" if tok.startswith("ghp_") else "assente" if not tok else "altro"
+        sys.exit(f"nessun repository privato visibile ({len(repos)} pubblici, token {tipo}): serve un token che li legga "
+                 "(segreto ORG_READ_TOKEN, con accesso ai repository privati di GS-Loft-Dev). Non cambio niente.")
     adesso = datetime.datetime.now(datetime.timezone.utc)
     nascosti = set(CONF.get("nascondi", []))
     progetti = []
