@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.png">
-  <img alt="GS·LOFT — Coaching per longevità e performance. Tecnologia al servizio del metodo." src="./assets/banner-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
+  <img alt="GS·LOFT — Coaching per longevità e performance. Tecnologia al servizio del metodo." src="./assets/banner-light.svg">
 </picture>
 
 <br>
@@ -17,20 +17,21 @@ Un percorso guidato dalla scienza e costruito su misura, con un team di medici, 
 
 ## ( il metodo )
 
-Sette pilastri, un solo percorso.
-
-<table>
-  <tr><td><code>01</code>&nbsp; Prevenzione e test di precisione</td><td><code>05</code>&nbsp; Mindset e gestione dello stress</td></tr>
-  <tr><td><code>02</code>&nbsp; Allenamento</td><td><code>06</code>&nbsp; Ottimizzazione del sonno</td></tr>
-  <tr><td><code>03</code>&nbsp; Nutrizione</td><td><code>07</code>&nbsp; Gestione del tempo</td></tr>
-  <tr><td><code>04</code>&nbsp; Nutraceutica</td><td></td></tr>
-</table>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/metodo-dark.svg">
+  <img alt="Sette pilastri, un solo percorso: 01 Prevenzione e test di precisione, 02 Allenamento, 03 Nutrizione, 04 Nutraceutica, 05 Mindset e gestione dello stress, 06 Ottimizzazione del sonno, 07 Gestione del tempo." src="./assets/metodo-light.svg" width="100%">
+</picture>
 
 <br>
 
 ## ( dev )
 
 Qui il team sviluppa gli **strumenti interni** che sostengono il metodo: dashboard, automazioni e integrazioni tra dati, preventivi e servizi.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dev-dark.svg">
+  <img alt="I dati di HubSpot, Google Fogli, Lovable e dei database interni passano dagli strumenti di GS-Loft-Dev e diventano dashboard, automazioni, AI, strumenti e dati centralizzati per il team." src="./assets/dev-light.svg" width="100%">
+</picture>
 
 | | Progetto | Cosa fa |
 |:--|:--|:--|

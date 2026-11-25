@@ -3,10 +3,18 @@
 Profilo pubblico dell'organizzazione **GS-Loft-Dev** su GitHub.
 
 - `profile/README.md`: la pagina che si vede su [github.com/GS-Loft-Dev](https://github.com/GS-Loft-Dev).
-- `profile/assets/`: i banner, chiaro e scuro (GitHub mostra quello giusto in base al tema di chi guarda).
+- `profile/assets/`: le immagini animate (banner, metodo, flusso dei dati), chiare e scure: GitHub mostra quelle giuste in base al tema di chi guarda. Restano anche i banner PNG statici.
 - `_sorgente/`: logo GS·LOFT (dal sito [gsloft.it](https://www.gsloft.it)) e lo script che crea i banner.
 
-## Rifare i banner
+## Rifare le immagini animate
+
+```bash
+python3 _sorgente/make-anim.py
+```
+
+Crea `banner`, `metodo` e `dev` in SVG, chiari e scuri, in `profile/assets/`. Sono animati solo con SMIL e CSS, perché GitHub non esegue script nelle immagini. Il testo usa Inter Tight se è installato, altrimenti il sans-serif di sistema.
+
+## Rifare i banner PNG
 
 ```bash
 python3 _sorgente/make-banner.py
