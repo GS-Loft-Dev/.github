@@ -100,6 +100,17 @@
       "nuovo": false
     },
     {
+      "nome": "restyling-web",
+      "gruppo": "Altro",
+      "testo": "In sviluppo",
+      "privato": false,
+      "url": "https://github.com/GS-Loft-Dev/restyling-web",
+      "lingua": "HTML",
+      "aggiornato": "2026-11-26T09:05:17Z",
+      "aggiornato_it": "26 nov 2026",
+      "nuovo": true
+    },
+    {
       "nome": "luvhub",
       "gruppo": "Altro",
       "testo": "In sviluppo",
@@ -109,23 +120,12 @@
       "aggiornato": "2026-11-25T17:06:55Z",
       "aggiornato_it": "25 nov 2026",
       "nuovo": true
-    },
-    {
-      "nome": "restyling-web",
-      "gruppo": "Altro",
-      "testo": "In sviluppo",
-      "privato": false,
-      "url": "https://github.com/GS-Loft-Dev/restyling-web",
-      "lingua": "HTML",
-      "aggiornato": "2026-11-25T15:57:17Z",
-      "aggiornato_it": "25 nov 2026",
-      "nuovo": true
     }
   ],
   "totale": 11,
   "privati": 7,
   "ultimo": {
-    "nome": "luvhub",
-    "data": "25 nov 2026"
+    "nome": "restyling-web",
+    "data": "26 nov 2026"
   }
 }
