@@ -45,8 +45,8 @@ Qui il team sviluppa gli **strumenti interni** che sostengono il metodo: dashboa
 |  | `assistenteLOFT` | Assistente AI del team, con permessi diversi per ogni utente | 25 nov 2026 |
 | **Strumenti** | [`PortaleQuiz`](https://github.com/GS-Loft-Dev/PortaleQuiz) | Quiz a tempo e survey interne per il team | 25 nov 2026 |
 | **Dati** | `data_management_project` | Centralizzazione dei dati di HubSpot e dei database interni | 25 nov 2026 |
-| **Altro** | [`restyling-web`](https://github.com/GS-Loft-Dev/restyling-web) <sup>nuovo</sup> | In sviluppo | 26 nov 2026 |
-|  | [`luvhub`](https://github.com/GS-Loft-Dev/luvhub) <sup>nuovo</sup> | In sviluppo | 25 nov 2026 |
+| **Altro** | [`luvhub`](https://github.com/GS-Loft-Dev/luvhub) <sup>nuovo</sup> | In sviluppo | 26 nov 2026 |
+|  | [`restyling-web`](https://github.com/GS-Loft-Dev/restyling-web) <sup>nuovo</sup> | In sviluppo | 26 nov 2026 |
 
 <sub>11 progetti, 7 privati: li vedono solo i membri dell'organizzazione. Elenco aggiornato da solo da una GitHub Action.</sub>
 <!-- progetti:fine -->
